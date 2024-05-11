@@ -1,4 +1,5 @@
-### NOTE: This project is no longer actively maintained.
+# Why does this fork exist?
+To fix the `rU` -> `r` in file reads. `rU` is now deprecated. 
 
 # PyReact
 

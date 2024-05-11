@@ -24,7 +24,7 @@ class TestJSXTransformer(TestCase):
         jsx_path = join(TEST_ROOT, 'files/test.jsx')
         js_path = join(TEST_ROOT, 'files/test.js')
 
-        with open(js_path, 'rU') as js:
+        with open(js_path, 'r') as js:
             self.assertEquals(
                 jsx.transform(jsx_path),
                 unicode(js.read()))

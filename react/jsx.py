@@ -22,7 +22,7 @@ class JSXTransformer(object):
 
     def __init__(self):
         path = react.source.path_for('JSXTransformer.js')
-        with open(path, 'rU') as f:
+        with open(path, 'r') as f:
             self.context = execjs.compile(f.read())
 
     def transform_string(self, jsx, harmony=False, strip_types=False):
@@ -47,7 +47,7 @@ class JSXTransformer(object):
         return js
 
     def transform(self, jsx_path, js_path=None, **kwargs):
-        with open(jsx_path, 'rU') as i:
+        with open(jsx_path, 'r') as i:
             js = self.transform_string(i.read(), **kwargs)
             if js_path:
                 with open(js_path, 'wb') as o:
